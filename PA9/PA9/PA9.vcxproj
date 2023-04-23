@@ -141,6 +141,9 @@
     <ClInclude Include="Platforms.h" />
     <ClInclude Include="Shapes.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="gameconcept2.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

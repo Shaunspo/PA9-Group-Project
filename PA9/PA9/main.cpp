@@ -8,10 +8,20 @@ using sf::CircleShape;
 using sf::Color;
 using sf::VideoMode;
 using sf::Event;
-
+using sf::Texture;
+using sf::Sprite;
 
 int main()
 {
+	Texture map;
+	Sprite background;
+	if (map.loadFromFile("gameconcept2.png"))
+	{
+		std::cout << "Error unable to load map background!" << std::endl;
+	}
+
+	background.setTexture(map);
+
 	RenderWindow window(VideoMode(1920, 1080), "Test Render");
 	CircleShape testshape(100.f);
 	testshape.setFillColor(Color::Blue);
@@ -25,7 +35,13 @@ int main()
 				window.close();
 		}
 		window.clear();
+		
+		window.draw(background);
+
 		window.draw(testshape);
+
+		
+
 		window.display();
 
 	}
