@@ -12,6 +12,7 @@ void Game::initWindow()
 	this->videoMode.width = 800;
 
 	this->window = new sf::RenderWindow(this->videoMode, "Game", sf::Style::Titlebar | sf::Style::Close);
+	this->window->setFramerateLimit(144);
 }
 
 void Game::initTestPlayer()

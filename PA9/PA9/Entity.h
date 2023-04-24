@@ -26,7 +26,7 @@ public:
 	~Entity();
 
 	//Functions
-	void updatePlayer();
+	void updateMovement();
 	void update();
 	void render(sf::RenderTarget& target);
 };

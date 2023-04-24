@@ -13,7 +13,13 @@ void Entity::initTexture()
 
 void Entity::initSprite()
 {
-	this->sprite.setTexture(this->textureSheet);
+	/*
+		Uncomment and delete other line when texture is added
+	*/
+	//this->sprite.setTexture(this->textureSheet);
+	sf::Texture testTexture;
+	testTexture.create(50, 50);
+	this->sprite.setTexture(testTexture);
 }
 
 Entity::Entity()
@@ -26,12 +32,29 @@ Entity::~Entity()
 {
 }
 
-void Entity::updatePlayer()
+void Entity::updateMovement()
 {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) //Left
+	{
+		this->sprite.move(-1.f, 0.f);
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) //Right
+	{
+		this->sprite.move(1.f, 0.f);
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) //Up
+	{
+		this->sprite.move(0.f, -1.f);
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) //Down
+	{
+		this->sprite.move(0.f, 1.f);
+	}
 }
 
 void Entity::update()
 {
+	this->updateMovement();
 }
 
 void Entity::render(sf::RenderTarget& target)
