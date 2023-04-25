@@ -15,7 +15,6 @@ private:
 	//Animation
 	sf::IntRect currentFrame;
 
-	//Movement
 
 	//Physics
 	sf::Vector2f velocity;
@@ -43,8 +42,9 @@ public:
 	const sf::IntRect getCurrentFrame();
 
 	//Setters
-	void setTextureSheet(const std::string textureSheetFile);
+	void setTextureSheetName(const std::string textureSheetFile);
 	void setCurrentFrame(const sf::IntRect frame);
+	void setSprite(const sf::Texture textureSheet);
 
 	//Modifiers
 	void setPosition(const float x, const float y);

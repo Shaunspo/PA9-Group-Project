@@ -14,9 +14,10 @@ void Entity::initSprite()
 		Base initialize
 		-Just makes the texture a white square
 	*/
-	sf::Texture testTexture;
-	testTexture.create(50, 50);
-	this->sprite.setTexture(testTexture);
+
+	//sf::Texture testTexture;
+	//testTexture.create(50, 50);
+	//this->sprite.setTexture(testTexture);
 }
 
 void Entity::initPhysics()
@@ -31,8 +32,6 @@ void Entity::initPhysics()
 
 Entity::Entity()
 {
-	this->initTexture();
-	this->initSprite();
 	this->initPhysics();
 }
 
@@ -60,7 +59,7 @@ const sf::IntRect Entity::getCurrentFrame()
 	return this->currentFrame;
 }
 
-void Entity::setTextureSheet(const std::string textureSheetFile)
+void Entity::setTextureSheetName(const std::string textureSheetFile)
 {
 	this->textureSheetFile = textureSheetFile;
 }
@@ -68,6 +67,11 @@ void Entity::setTextureSheet(const std::string textureSheetFile)
 void Entity::setCurrentFrame(const sf::IntRect frame)
 {
 	this->currentFrame = frame;
+}
+
+void Entity::setSprite(const sf::Texture textureSheet)
+{
+	this->sprite.setTexture(textureSheet);
 }
 
 void Entity::setPosition(const float x, const float y)

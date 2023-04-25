@@ -12,7 +12,7 @@ void Game::initWindow()
 	this->videoMode.width = 800;
 
 	this->window = new sf::RenderWindow(this->videoMode, "Game", sf::Style::Titlebar | sf::Style::Close);
-	this->window->setFramerateLimit(144);
+	this->window->setFramerateLimit(30);
 }
 
 void Game::initTestPlayer()
@@ -125,7 +125,7 @@ void Game::render()
 		Renders the game objects
 	*/
 
-	this->window->clear(sf::Color::Black);
+	this->window->clear(sf::Color::Blue);
 
 	//Draw game objects
 	//this->renderTestPlayer();

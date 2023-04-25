@@ -9,6 +9,6 @@ public:
 	Duck();
 
 	//Core
-	virtual void initSprite();
+	void initSprite() override;
 };
 
