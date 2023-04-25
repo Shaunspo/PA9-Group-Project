@@ -10,6 +10,7 @@ class Entity
 private:
 	sf::Sprite sprite;
 	sf::Texture textureSheet;
+	std::string textureSheetFile;
 
 	//Animation
 
@@ -32,6 +33,14 @@ private:
 public:
 	Entity();
 	~Entity();
+
+	//Getters
+	const sf::FloatRect getGlobalBounds() const;
+
+
+	//Modifiers
+	void setPosition(const float x, const float y);
+	void resetVelocityY();
 
 	//Functions
 	void move(const float dir_x, const float dir_y);

@@ -5,7 +5,7 @@ void Entity::initTexture()
 	/*
 		Put the png file for the sprite in the quotations
 	*/
-	if (!this->textureSheet.loadFromFile("image.png"))
+	if (!this->textureSheet.loadFromFile(this->textureSheetFile))
 	{
 		std::cout << "Error could not load texture sheet" << std::endl;
 	}
@@ -14,7 +14,7 @@ void Entity::initTexture()
 void Entity::initSprite()
 {
 	/*
-		Uncomment and delete other line when texture is added
+		Uncomment and delete other lines when texture is added
 	*/
 	//this->sprite.setTexture(this->textureSheet);
 	sf::Texture testTexture;
@@ -27,7 +27,7 @@ void Entity::initPhysics()
 	this->velocityMax = 50.f;
 	this->velocityMin = 1.f;
 	this->acceleration = 3.f;
-	this->drag = 0.93f;
+	this->drag = 0.85f;
 	this->gravity = 4.f;
 	this->velocityMaxY = 15.f;
 }
@@ -41,6 +41,21 @@ Entity::Entity()
 
 Entity::~Entity()
 {
+}
+
+const sf::FloatRect Entity::getGlobalBounds() const
+{
+	return this->sprite.getGlobalBounds();
+}
+
+void Entity::setPosition(const float x, const float y)
+{
+	this->sprite.setPosition(x, y);
+}
+
+void Entity::resetVelocityY()
+{
+	this->velocity.y = 0.f;
 }
 
 void Entity::move(const float dir_x, const float dir_y)
@@ -85,11 +100,15 @@ void Entity::updateMovement()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) //Left
 	{
-		this->move(-0.5f, 0.f);
+		this->move(-0.4f, 0.f);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) //Right
 	{
-		this->move(0.5f, 0.f);
+		this->move(0.4f, 0.f);
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) //Jump
+	{
+		this->move(0.f, 5.f);
 	}
 }
 

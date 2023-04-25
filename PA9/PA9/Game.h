@@ -40,6 +40,7 @@ public:
 	//Functions
 	void pollEvents();
 	void updateTestPlayer();
+	void TestUpdateCollision();
 	void update();
 	void renderPlayer();
 	void render();

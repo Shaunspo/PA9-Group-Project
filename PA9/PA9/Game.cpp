@@ -61,11 +61,22 @@ void Game::pollEvents()
 	}
 
 	this->updateTestPlayer();
+	this->TestUpdateCollision();
 }
 
 void Game::updateTestPlayer()
 {
 	this->testPlayer->update();
+}
+
+void Game::TestUpdateCollision()
+{
+	//Collision bottom of screen
+	if (this->testPlayer->getGlobalBounds().top + this->testPlayer->getGlobalBounds().height > this->window->getSize().y)
+	{
+		this->testPlayer->resetVelocityY();
+		this->testPlayer->setPosition(this->testPlayer->getGlobalBounds().left, this->window->getSize().y - this->testPlayer->getGlobalBounds().height);
+	}
 }
 
 //Functions
