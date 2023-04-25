@@ -2,9 +2,6 @@
 
 void Entity::initTexture()
 {
-	/*
-		Put the png file for the sprite in the quotations
-	*/
 	if (!this->textureSheet.loadFromFile(this->textureSheetFile))
 	{
 		std::cout << "Error could not load texture sheet" << std::endl;
@@ -14,9 +11,9 @@ void Entity::initTexture()
 void Entity::initSprite()
 {
 	/*
-		Uncomment and delete other lines when texture is added
+		Base initialize
+		-Just makes the texture a white square
 	*/
-	//this->sprite.setTexture(this->textureSheet);
 	sf::Texture testTexture;
 	testTexture.create(50, 50);
 	this->sprite.setTexture(testTexture);
@@ -46,6 +43,31 @@ Entity::~Entity()
 const sf::FloatRect Entity::getGlobalBounds() const
 {
 	return this->sprite.getGlobalBounds();
+}
+
+sf::Sprite Entity::getSprite()
+{
+	return this->sprite;
+}
+
+sf::Texture Entity::getTextureSheet()
+{
+	return this->textureSheet;
+}
+
+const sf::IntRect Entity::getCurrentFrame()
+{
+	return this->currentFrame;
+}
+
+void Entity::setTextureSheet(const std::string textureSheetFile)
+{
+	this->textureSheetFile = textureSheetFile;
+}
+
+void Entity::setCurrentFrame(const sf::IntRect frame)
+{
+	this->currentFrame = frame;
 }
 
 void Entity::setPosition(const float x, const float y)

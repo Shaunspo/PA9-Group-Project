@@ -1,7 +1,2 @@
-﻿  Entity.cpp
-C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(76,26): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
+﻿  Duck.cpp
   PA9.vcxproj -> C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\x64\Debug\PA9.exe

@@ -13,6 +13,7 @@ private:
 	std::string textureSheetFile;
 
 	//Animation
+	sf::IntRect currentFrame;
 
 	//Movement
 
@@ -25,18 +26,25 @@ private:
 	float gravity;
 	float velocityMaxY;
 
-	//Core
-	void initTexture();
-	void initSprite();
-	void initPhysics();
 
 public:
 	Entity();
 	~Entity();
 
+	//Core
+	void initTexture();
+	virtual void initSprite();
+	void initPhysics();
+
 	//Getters
 	const sf::FloatRect getGlobalBounds() const;
+	sf::Sprite getSprite();
+	sf::Texture getTextureSheet();
+	const sf::IntRect getCurrentFrame();
 
+	//Setters
+	void setTextureSheet(const std::string textureSheetFile);
+	void setCurrentFrame(const sf::IntRect frame);
 
 	//Modifiers
 	void setPosition(const float x, const float y);

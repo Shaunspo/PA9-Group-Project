@@ -5,6 +5,7 @@
 #include "SFML/Audio.hpp"
 #include "SFML/Network.hpp"
 #include "Entity.h"
+#include "Duck.h"
 
 /*
 	Class that acts as game engine
@@ -23,26 +24,31 @@ private:
 	sf::Event ev;
 
 	Entity* testPlayer;
+	Duck* duck;
 
 	void initVariable();
 	void initWindow();
 
-	void initTestPlayer();
+	void initTestPlayer();//test function with white square
+	void initDuck();
 
 public:
 	//Constructors / Destructors
 	Game();
 	~Game();
 
-	//Accessors
+	//Getters
 	const bool getWindowIsOpen() const;
 
 	//Functions
 	void pollEvents();
-	void updateTestPlayer();
-	void TestUpdateCollision();
+	void updateTestPlayer();//test function with white square
+	void updateDuck();
+	void TestUpdateCollision();//test function with white square
+	void updateCollision();
 	void update();
-	void renderPlayer();
+	void renderTestPlayer();//test function with white square
+	void renderDuck();
 	void render();
 };
 
