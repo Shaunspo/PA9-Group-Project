@@ -8,6 +8,8 @@ Level::~Level() {
 
 }
 
+
+
 float Level::getGroundXpos(int i) {
 	return ground[i].getXpos();
 }
@@ -138,4 +140,14 @@ void Level::renderLevel(RenderTarget& target) {
 	for (int j = 0; j < 50; j++) {
 		target.draw(this->thin[j].getRect());
 	}
+}
+
+const RectangleShape Level::getGroundShape(int i)
+{
+	return ground[i].getRect();
+}
+
+const RectangleShape Level::getThinShape(int i)
+{
+	return thin[i].getRect();
 }

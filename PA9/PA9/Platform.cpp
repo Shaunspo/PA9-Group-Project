@@ -26,19 +26,19 @@ Platform::Platform(float xPos, float yPos, float w, float h, float rot) {
 // Setters and getters
 
 float Platform::getXpos() {
-	return posX;
+	return this->posX;
 }
 
 float Platform::getYpos() {
-	return posY;
+	return this->posY;
 }
 
 float Platform::getWidth() {
-	return width;
+	return this->width;
 }
 
 float Platform::getHeight() {
-	return height;
+	return this->height;
 }
 
 float Platform::getRot() {

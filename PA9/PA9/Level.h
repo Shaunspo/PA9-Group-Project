@@ -13,6 +13,10 @@ public:
 
 	void renderLevel(RenderTarget& target);
 
+	const RectangleShape getGroundShape(int i);
+
+	const RectangleShape getThinShape(int i);
+
 	float getGroundXpos(int i);
 
 	float getGroundYpos(int i);

@@ -80,15 +80,52 @@ void Game::updateCollision()
 	}
 	//Collision with platform
 	for (int i = 0; i < 50; i++)
-	{
-		if (this->Duck->getGlobalBounds().top + this->Duck->getGlobalBounds().height > this->TestLevel.getGroundHeight(i))
+	{	
+		if (this->Duck->getGlobalBounds().intersects(this->TestLevel.getGroundShape(i).getGlobalBounds()))
 		{
-			if(this->Duck->getGlobalBounds().left > this->TestLevel.getGroundXpos(i) && this->Duck->getGlobalBounds().left + this->Duck->getGlobalBounds().width < this->TestLevel.getGroundXpos(i) + this->TestLevel.getGroundWidth(i))
-			this->Duck->resetVelocityY();
-			this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->Duck->getGlobalBounds().height + this->TestLevel.getGroundHeight(i));
-			this->Duck->setGrounded(true);
-
+			// Right side collision
+			if (this->Duck->getGlobalBounds().left <= this->TestLevel.getGroundXpos(i) + this->TestLevel.getGroundWidth(i) && this->Duck->getGlobalBounds().top - this->Duck->getGlobalBounds().height < this->TestLevel.getGroundHeight(i))
+			{
+				this->Duck->resetVelocityX();
+				this->Duck->setPosition(this->TestLevel.getGroundXpos(i) + this->TestLevel.getGroundWidth(i) - 5.f, this->Duck->getGlobalBounds().top);
+			}
+			// Left side collision
+			if (this->Duck->getGlobalBounds().left + this->Duck->getGlobalBounds().width >= this->TestLevel.getGroundXpos(i) && this->Duck->getGlobalBounds().top - this->Duck->getGlobalBounds().height < this->TestLevel.getGroundHeight(i))
+			{
+				this->Duck->resetVelocityX();
+				this->Duck->setPosition(this->TestLevel.getGroundXpos(i) - 5.f, this->Duck->getGlobalBounds().top);
+			}
+			// Collision with top
+			else
+			{
+				this->Duck->resetVelocityY();
+				this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->TestLevel.getGroundYpos(i) - this->Duck->getGlobalBounds().height);
+				this->Duck->setGrounded(true);
+			}
 		}
+		if (this->Duck->getGlobalBounds().intersects(this->TestLevel.getThinShape(i).getGlobalBounds()))
+		{
+			// Right side collision
+			if (this->Duck->getGlobalBounds().left <= this->TestLevel.getThinXpos(i) + this->TestLevel.getThinWidth(i) && this->Duck->getGlobalBounds().top - this->Duck->getGlobalBounds().height < this->TestLevel.getThinHeight(i))
+			{
+				this->Duck->resetVelocityX();
+				this->Duck->setPosition(this->TestLevel.getThinXpos(i) + this->TestLevel.getThinWidth(i) - 5.f, this->Duck->getGlobalBounds().top);
+			}
+			// Left side collision
+			if (this->Duck->getGlobalBounds().left + this->Duck->getGlobalBounds().width >= this->TestLevel.getThinXpos(i) && this->Duck->getGlobalBounds().top - this->Duck->getGlobalBounds().height < this->TestLevel.getThinHeight(i))
+			{
+				this->Duck->resetVelocityX();
+				this->Duck->setPosition(this->TestLevel.getThinXpos(i) - 5.f, this->Duck->getGlobalBounds().top);
+			}
+			// Collision with top
+			else
+			{
+				this->Duck->resetVelocityY();
+				this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->TestLevel.getGroundYpos(i) - this->Duck->getGlobalBounds().height);
+				this->Duck->setGrounded(true);
+			}
+		}
+
 	}
 }
 

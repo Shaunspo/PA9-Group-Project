@@ -109,6 +109,11 @@ void Entity::resetVelocityY()
 	this->velocity.y = 0.f;
 }
 
+void Entity::resetVelocityX()
+{
+	this->velocity.x = 0.f;
+}
+
 void Entity::move(const float dir_x, const float dir_y)
 {
 	//Accelerration
