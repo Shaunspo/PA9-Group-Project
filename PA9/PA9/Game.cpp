@@ -15,15 +15,10 @@ void Game::initWindow()
 	this->window->setFramerateLimit(30);
 }
 
-void Game::initTestPlayer()
+void Game::initPlayer()
 {
-	this->testPlayer = new Entity();
+	this->Duck = new Entity();
 }
-
-//void Game::initDuck()
-//{
-//	this->duck = new Duck();
-//}
 
 
 //Public Functions
@@ -33,15 +28,13 @@ Game::Game()
 {
 	this->initVariable();
 	this->initWindow();
-	this->initTestPlayer();
-	//this->initDuck();
+	this->initPlayer();
 }
 
 Game::~Game()
 {
 	delete this->window;
-	delete this->testPlayer;
-	//delete this->duck;
+	delete this->Duck;
 }
 
 //Accessors
@@ -67,41 +60,24 @@ void Game::pollEvents()
 		}
 	}
 
-	this->updateTestPlayer();
-	this->TestUpdateCollision();
-	//this->updateDuck();
-	//this->updateCollision();
+	this->updatePlayer();
+	this->updateCollision();
 }
 
-void Game::updateTestPlayer()
+void Game::updatePlayer()
 {
-	this->testPlayer->update();
+	this->Duck->update();
 }
 
-//void Game::updateDuck()
-//{
-//	this->duck->update();
-//}
-
-void Game::TestUpdateCollision()
+void Game::updateCollision()
 {
 	//Collision bottom of screen
-	if (this->testPlayer->getGlobalBounds().top + this->testPlayer->getGlobalBounds().height > this->window->getSize().y)
+	if (this->Duck->getGlobalBounds().top + this->Duck->getGlobalBounds().height > this->window->getSize().y)
 	{
-		this->testPlayer->resetVelocityY();
-		this->testPlayer->setPosition(this->testPlayer->getGlobalBounds().left, this->window->getSize().y - this->testPlayer->getGlobalBounds().height);
+		this->Duck->resetVelocityY();
+		this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->window->getSize().y - this->Duck->getGlobalBounds().height);
 	}
 }
-
-//void Game::updateCollision()
-//{
-//	//Collision bottom of screen
-//	if (this->duck->getGlobalBounds().top + this->duck->getGlobalBounds().height > this->window->getSize().y)
-//	{
-//		this->duck->resetVelocityY();
-//		this->duck->setPosition(this->duck->getGlobalBounds().left, this->window->getSize().y - this->duck->getGlobalBounds().height);
-//	}
-//}
 
 //Functions
 void Game::update()
@@ -109,15 +85,10 @@ void Game::update()
 	pollEvents();
 }
 
-void Game::renderTestPlayer()
+void Game::renderPlayer()
 {
-	this->testPlayer->render(*this->window);
+	this->Duck->render(*this->window);
 }
-
-//void Game::renderDuck()
-//{
-//	this->duck->render(*this->window);
-//}
 
 void Game::render()
 {
@@ -128,8 +99,7 @@ void Game::render()
 	this->window->clear(sf::Color::Blue);
 
 	//Draw game objects
-	this->renderTestPlayer();
-	//this->renderDuck();
+	this->renderPlayer();
 
 	this->window->display();
 }

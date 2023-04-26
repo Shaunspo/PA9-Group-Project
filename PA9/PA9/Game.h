@@ -22,13 +22,12 @@ private:
 	sf::VideoMode videoMode;
 	sf::Event ev;
 
-	Entity* testPlayer;
+	Entity* Duck;
 
 	void initVariable();
 	void initWindow();
 
-	void initTestPlayer();//test function with white square
-	void initDuck();
+	void initPlayer();//test function with white square
 
 public:
 	//Constructors / Destructors
@@ -40,13 +39,10 @@ public:
 
 	//Functions
 	void pollEvents();
-	void updateTestPlayer();//test function with white square
-	void updateDuck();
-	void TestUpdateCollision();//test function with white square
-	void updateCollision();
+	void updatePlayer();//test function with white square
+	void updateCollision();//test function with white square
 	void update();
-	void renderTestPlayer();//test function with white square
-	void renderDuck();
+	void renderPlayer();//test function with white square
 	void render();
 };
 
