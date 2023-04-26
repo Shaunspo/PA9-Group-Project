@@ -1,5 +1,10 @@
 #include "Entity.h"
 
+void Entity::initvariables()
+{
+	this->moving = false;
+}
+
 void Entity::initTexture()
 {
 	if (!this->textureSheet.loadFromFile("images/idle_duck_animation.png"))
@@ -14,11 +19,11 @@ void Entity::initSprite()
 		Base initialize
 	*/
 	this->sprite.setTexture(this->textureSheet);
-	this->sprite.setTextureRect(sf::IntRect(0, 0, 64, 64));
+	//this->sprite.setTextureRect(sf::IntRect(0, 0, 64, 64));
 
-	//sf::Texture testTexture;
-	//testTexture.create(50, 50);
-	//this->sprite.setTexture(testTexture);
+	this->currentFrame = sf::IntRect(0, 0, 64, 64);
+	this->sprite.setTextureRect(this->currentFrame);
+	this->sprite.setScale(2.2f, 2.2f);
 }
 
 void Entity::initPhysics()
@@ -31,11 +36,18 @@ void Entity::initPhysics()
 	this->velocityMaxY = 15.f;
 }
 
+void Entity::initAnimations()
+{
+	this->animationTimer.restart();
+}
+
 Entity::Entity()
 {
+	this->initvariables();
 	this->initTexture();
 	this->initSprite();
 	this->initPhysics();
+	this->initAnimations();
 }
 
 Entity::~Entity()
@@ -104,6 +116,36 @@ void Entity::move(const float dir_x, const float dir_y)
 	}
 }
 
+void Entity::updateAnimations()
+{
+	if(this->animationTimer.getElapsedTime().asSeconds() >= 0.5f)
+	{ 
+	if (this->moving == false) // idle animation
+	{
+		this->currentFrame.left += 64.0f;
+		if(this->currentFrame.top == 0)
+		{ 
+			if (this->currentFrame.left >= 192)
+			{
+				this->currentFrame.left = 0;
+				this->currentFrame.top = 64;
+			}
+		}
+		else
+		{
+			if (this->currentFrame.left >= 192)
+			{
+				this->currentFrame.left = 0;
+				this->currentFrame.top = 0;
+			}
+		}
+		
+	}
+	this->animationTimer.restart();
+	this->sprite.setTextureRect(this->currentFrame);
+	}
+}
+
 void Entity::updatePhysics()
 {
 	//Gravity
@@ -132,17 +174,21 @@ void Entity::updatePhysics()
 
 void Entity::updateMovement()
 {
+	this->moving = false;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) //Left
 	{
 		this->move(-0.4f, 0.f);
+		this->moving = true;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) //Right
 	{
 		this->move(0.4f, 0.f);
+		this->moving = true;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) //Jump
 	{
 		this->move(0.f, 5.f);
+		this->moving = true;
 	}
 }
 
@@ -150,6 +196,7 @@ void Entity::update()
 {
 	this->updateMovement();
 	this->updatePhysics();
+	this->updateAnimations();
 }
 
 void Entity::render(sf::RenderTarget& target)

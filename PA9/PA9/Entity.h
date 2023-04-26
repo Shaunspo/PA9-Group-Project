@@ -14,6 +14,8 @@ private:
 
 	//Animation
 	sf::IntRect currentFrame;
+	bool moving;
+	sf::Clock animationTimer;
 
 
 	//Physics
@@ -31,9 +33,11 @@ public:
 	~Entity();
 
 	//Core
+	void initvariables();
 	void initTexture();
 	virtual void initSprite();
 	void initPhysics();
+	void initAnimations();
 
 	//Getters
 	const sf::FloatRect getGlobalBounds() const;
@@ -53,6 +57,7 @@ public:
 
 	//Functions
 	void move(const float dir_x, const float dir_y);
+	void updateAnimations();
 	void updatePhysics();
 	void updateMovement();
 	void update();
