@@ -33,7 +33,7 @@ void Entity::initPhysics()
 	this->acceleration = 3.f;
 	this->drag = 0.85f;
 	this->gravity = 4.f;
-	this->velocityMaxY = 15.f;
+	this->velocityMaxY = 200.f;
 }
 
 void Entity::initAnimations()
@@ -114,6 +114,14 @@ void Entity::move(const float dir_x, const float dir_y)
 	{
 		this->velocity.x = velocityMax * ((this->velocity.x < 0) ? -1.f : 1.f);
 	}
+
+	this->velocity.y += dir_y * this->acceleration;
+
+	//Limit velocity
+	if (std::abs(this->velocity.y) > this->velocityMax)
+	{
+		this->velocity.y = velocityMax * ((this->velocity.y < 0) ? -1.f : 1.f);
+	}
 }
 
 void Entity::updateAnimations()
@@ -187,7 +195,7 @@ void Entity::updateMovement()
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) //Jump
 	{
-		this->move(0.f, 5.f);
+		this->move(0.f, -1000.f);
 		this->moving = true;
 	}
 }
