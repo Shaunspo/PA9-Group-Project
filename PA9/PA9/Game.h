@@ -5,6 +5,7 @@
 #include "SFML/Audio.hpp"
 #include "SFML/Network.hpp"
 #include "Entity.h"
+#include "Level.h"
 
 /*
 	Class that acts as game engine
@@ -23,6 +24,7 @@ private:
 	sf::Event ev;
 
 	Entity* Duck;
+	Level TestLevel;
 
 	void initVariable();
 	void initWindow();
@@ -44,6 +46,7 @@ public:
 	void update();
 	void renderPlayer();//test function with white square
 	void render();
+	void preLoop();
 };
 
 #endif

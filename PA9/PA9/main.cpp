@@ -59,6 +59,7 @@ int main()
 {
 	Game game;
 
+	game.preLoop();
 
 	//Game loop
 	while (game.getWindowIsOpen())

@@ -98,8 +98,14 @@ void Game::render()
 
 	this->window->clear(sf::Color::Blue);
 
+	this->TestLevel.renderLevel(*this->window);
+
 	//Draw game objects
 	this->renderPlayer();
 
 	this->window->display();
+}
+
+void Game::preLoop() {
+	TestLevel.buildLevel();
 }

@@ -1,15 +1,15 @@
-﻿  Entity.cpp
-C:\Users\shaun\OneDrive\Desktop\PA9\PA ACtual\PA9-Group-Project\PA9\PA9\Entity.cpp(133,30): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-C:\Users\shaun\OneDrive\Desktop\PA9\PA ACtual\PA9-Group-Project\PA9\PA9\Entity.cpp(160,26): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Game.cpp
-  main.cpp
+﻿  Game.cpp
+  Level.cpp
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(12,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(49,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(50,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(63,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(64,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(79,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(81,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(87,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(89,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\PA9\Level.cpp(14,6): warning C4101: 'balconyDecider': unreferenced local variable
+  Platform.cpp
   Generating Code...
-  PA9.vcxproj -> C:\Users\shaun\OneDrive\Desktop\PA9\PA ACtual\PA9-Group-Project\PA9\x64\Debug\PA9.exe
+  PA9.vcxproj -> C:\Users\sethc\OneDrive\Documents\GitHub\PA9-Group-Project\PA9\x64\Debug\PA9.exe
