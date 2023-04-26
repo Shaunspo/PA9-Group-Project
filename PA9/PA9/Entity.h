@@ -26,6 +26,7 @@ private:
 	float drag;
 	float gravity;
 	float velocityMaxY;
+	bool isGrounded;
 
 
 public:
@@ -50,6 +51,7 @@ public:
 	void setCurrentFrame(const sf::IntRect frame);
 	void setSprite(sf::Texture textureSheet);
 	void setFrame(const sf::IntRect currentFrame);
+	void setGrounded(const bool grounded);
 
 	//Modifiers
 	void setPosition(const float x, const float y);

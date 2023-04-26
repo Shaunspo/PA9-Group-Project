@@ -94,6 +94,11 @@ void Entity::setFrame(const sf::IntRect currentFrame)
 	this->sprite.setTextureRect(currentFrame);
 }
 
+void Entity::setGrounded(const bool grounded)
+{
+	isGrounded = grounded;
+}
+
 void Entity::setPosition(const float x, const float y)
 {
 	this->sprite.setPosition(x, y);
@@ -193,10 +198,11 @@ void Entity::updateMovement()
 		this->move(0.4f, 0.f);
 		this->moving = true;
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) //Jump
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space) && isGrounded == true) //Jump
 	{
 		this->move(0.f, -1000.f);
 		this->moving = true;
+		setGrounded(false);
 	}
 }
 

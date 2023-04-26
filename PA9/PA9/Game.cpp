@@ -76,6 +76,19 @@ void Game::updateCollision()
 	{
 		this->Duck->resetVelocityY();
 		this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->window->getSize().y - this->Duck->getGlobalBounds().height);
+		this->Duck->setGrounded(true);
+	}
+	//Collision with platform
+	for (int i = 0; i < 50; i++)
+	{
+		if (this->Duck->getGlobalBounds().top + this->Duck->getGlobalBounds().height > this->TestLevel.getGroundHeight(i))
+		{
+			if(this->Duck->getGlobalBounds().left > this->TestLevel.getGroundXpos(i) && this->Duck->getGlobalBounds().left + this->Duck->getGlobalBounds().width < this->TestLevel.getGroundXpos(i) + this->TestLevel.getGroundWidth(i))
+			this->Duck->resetVelocityY();
+			this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->Duck->getGlobalBounds().height + this->TestLevel.getGroundHeight(i));
+			this->Duck->setGrounded(true);
+
+		}
 	}
 }
 
