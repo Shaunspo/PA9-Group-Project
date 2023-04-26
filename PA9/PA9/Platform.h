@@ -8,6 +8,7 @@
 using sf::RectangleShape;
 using sf::Vector2f;
 using sf::RenderTarget;
+using sf::Texture;
 
 // Platform master class
 class Platform
@@ -54,6 +55,7 @@ public:
 
 	// public data member for inhereting classes to use
 	RectangleShape rect;
+	Texture bricks;
 
 private:
 

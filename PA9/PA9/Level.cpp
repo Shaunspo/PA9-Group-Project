@@ -8,6 +8,42 @@ Level::~Level() {
 
 }
 
+float Level::getGroundXpos(int i) {
+	return ground[i].getXpos();
+}
+
+float Level::getGroundYpos(int i) {
+	return ground[i].getYpos();
+}
+
+float Level::getGroundWidth(int i) {
+	return ground[i].getWidth();
+}
+
+float Level::getGroundHeight(int i) {
+	return ground[i].getHeight();
+}
+
+float Level::getThinXpos(int i) {
+	return thin[i].getXpos();
+}
+
+float Level::getThinYpos(int i) {
+	return thin[i].getYpos();
+}
+
+float Level::getThinWidth(int i) {
+	return thin[i].getWidth();
+}
+
+float Level::getThinHeight(int i) {
+	return thin[i].getHeight();
+}
+
+float Level::getThinRot(int i) {
+	return thin[i].getRot();
+}
+
 void Level::buildLevel() {
 	srand(time(NULL));
 	int platDecider;

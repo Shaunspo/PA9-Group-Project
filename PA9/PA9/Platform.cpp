@@ -7,6 +7,8 @@ Platform::Platform() {
 	width = 0.f;
 	height = 0.f;
 	rotation = 0.f;
+	bricks.loadFromFile("images/brickTexture.png");
+	bricks.setRepeated(true);
 }
 
 Platform::~Platform() {
@@ -94,10 +96,12 @@ void Platform::renderPlatform(RenderTarget& target) {
 // Overloaded methods for GroundPlatform and ThinPlatform classes
 
 void GroundPlatform::placePlatform() {
-	rect.setFillColor(sf::Color::Green);
+	rect.setFillColor(sf::Color::White);
 	rect.setSize(Vector2f(getWidth() * 64, getHeight() * 64));
 	rect.setPosition(getXpos(), getYpos());
 	rect.setRotation(0.f);
+	rect.setTexture(&bricks);
+	rect.setTextureRect(sf::IntRect(0, 0, 64, 64));
 }
 
 void GroundPlatform::placePlatform(float xPos, float yPos, float w, float h, float rot) {

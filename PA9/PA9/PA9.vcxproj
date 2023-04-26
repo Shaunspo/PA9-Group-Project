@@ -150,6 +150,7 @@
     <ClInclude Include="Shapes.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="images\brickTexture.png" />
     <Image Include="images\duck_running_animation_black.png" />
     <Image Include="images\gameconcept2.png" />
     <Image Include="images\idle_duck_animation.png" />

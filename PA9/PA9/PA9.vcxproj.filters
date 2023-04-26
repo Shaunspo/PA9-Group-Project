@@ -67,5 +67,8 @@
     <Image Include="images\duck_running_animation_black.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="images\brickTexture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

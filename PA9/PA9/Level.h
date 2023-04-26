@@ -13,6 +13,24 @@ public:
 
 	void renderLevel(RenderTarget& target);
 
+	float getGroundXpos(int i);
+
+	float getGroundYpos(int i);
+
+	float getGroundWidth(int i);
+
+	float getGroundHeight(int i);
+
+	float getThinXpos(int i);
+
+	float getThinYpos(int i);
+
+	float getThinWidth(int i);
+
+	float getThinHeight(int i);
+	
+	float getThinRot(int i);
+
 private:
 	GroundPlatform ground[50];
 	ThinPlatform thin[50];
