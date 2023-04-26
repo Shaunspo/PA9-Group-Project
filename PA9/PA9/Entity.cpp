@@ -2,7 +2,7 @@
 
 void Entity::initTexture()
 {
-	if (!this->textureSheet.loadFromFile(this->textureSheetFile))
+	if (!this->textureSheet.loadFromFile("images/idle_duck_animation.png"))
 	{
 		std::cout << "Error could not load texture sheet" << std::endl;
 	}
@@ -12,8 +12,9 @@ void Entity::initSprite()
 {
 	/*
 		Base initialize
-		-Just makes the texture a white square
 	*/
+	this->sprite.setTexture(this->textureSheet);
+	this->sprite.setTextureRect(sf::IntRect(0, 0, 64, 64));
 
 	//sf::Texture testTexture;
 	//testTexture.create(50, 50);
@@ -32,6 +33,8 @@ void Entity::initPhysics()
 
 Entity::Entity()
 {
+	this->initTexture();
+	this->initSprite();
 	this->initPhysics();
 }
 
@@ -69,9 +72,14 @@ void Entity::setCurrentFrame(const sf::IntRect frame)
 	this->currentFrame = frame;
 }
 
-void Entity::setSprite(const sf::Texture textureSheet)
+void Entity::setSprite(sf::Texture textureSheet)
 {
 	this->sprite.setTexture(textureSheet);
+}
+
+void Entity::setFrame(const sf::IntRect currentFrame)
+{
+	this->sprite.setTextureRect(currentFrame);
 }
 
 void Entity::setPosition(const float x, const float y)

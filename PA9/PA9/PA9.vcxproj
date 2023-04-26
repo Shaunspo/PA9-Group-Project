@@ -133,14 +133,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Duck.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
-    <ClInclude Include="Duck.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Movement.h" />
@@ -148,6 +146,7 @@
     <ClInclude Include="Shapes.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="images\duck_running_animation_black.png" />
     <Image Include="images\gameconcept2.png" />
     <Image Include="images\idle_duck_animation.png" />
   </ItemGroup>

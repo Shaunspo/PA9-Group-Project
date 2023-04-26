@@ -5,7 +5,6 @@
 #include "SFML/Audio.hpp"
 #include "SFML/Network.hpp"
 #include "Entity.h"
-#include "Duck.h"
 
 /*
 	Class that acts as game engine
@@ -24,7 +23,6 @@ private:
 	sf::Event ev;
 
 	Entity* testPlayer;
-	Duck* duck;
 
 	void initVariable();
 	void initWindow();

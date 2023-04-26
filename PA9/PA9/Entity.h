@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "SFML/Graphics.hpp"
+#include <SFML\Graphics.hpp>
 #include "SFML/Window.hpp"
 #include "SFML/System.hpp"
 
@@ -44,7 +44,8 @@ public:
 	//Setters
 	void setTextureSheetName(const std::string textureSheetFile);
 	void setCurrentFrame(const sf::IntRect frame);
-	void setSprite(const sf::Texture textureSheet);
+	void setSprite(sf::Texture textureSheet);
+	void setFrame(const sf::IntRect currentFrame);
 
 	//Modifiers
 	void setPosition(const float x, const float y);
