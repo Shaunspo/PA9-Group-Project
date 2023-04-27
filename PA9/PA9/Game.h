@@ -26,6 +26,8 @@ private:
 	Entity* Duck;
 	Level TestLevel;
 	sf::View camera;
+	sf::Sprite background;
+	sf::Texture city;
 
 	void initVariable();
 	void initWindow();

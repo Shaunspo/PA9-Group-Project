@@ -159,6 +159,7 @@
     <Image Include="images\duck_running_animation_black.png" />
     <Image Include="images\gameconcept2.png" />
     <Image Include="images\idle_duck_animation.png" />
+    <Image Include="images\sea-city-cityscape-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\04B_30__.TTF" />

@@ -158,6 +158,12 @@ void Game::render()
 
 	this->window->clear(sf::Color::Blue);
 
+	this->window->draw(background);
+
+	if (Duck->getPosition().y < 1000) {
+		background.setPosition(sf::Vector2f(Duck->getPosition().x - 610, Duck->getPosition().y - 380));
+	}
+
 	this->TestLevel.renderLevel(*this->window);
 
 	//Draw game objects
@@ -168,4 +174,6 @@ void Game::render()
 
 void Game::preLoop() {
 	TestLevel.buildLevel();
+	city.loadFromFile("images/sea-city-cityscape-1.png");
+	background.setTexture(city);
 }
