@@ -43,6 +43,14 @@ const bool Game::getWindowIsOpen() const
 	return this->window->isOpen();
 }
 
+void Game::setView(const sf::View& newView) {
+	this->camera = newView;
+}
+
+sf::Vector2f Game::getPlayerPos() {
+	return Duck->getPosition();
+}
+
 void Game::pollEvents()
 {
 	//Event polling
@@ -145,6 +153,8 @@ void Game::render()
 	/*
 		Renders the game objects
 	*/
+
+	this->window->setView(camera);
 
 	this->window->clear(sf::Color::Blue);
 

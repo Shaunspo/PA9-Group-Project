@@ -45,6 +45,7 @@ public:
 	sf::Sprite getSprite();
 	sf::Texture getTextureSheet();
 	const sf::IntRect getCurrentFrame();
+	sf::Vector2f getPosition();
 
 	//Setters
 	void setTextureSheetName(const std::string textureSheetFile);

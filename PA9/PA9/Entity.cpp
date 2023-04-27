@@ -222,3 +222,7 @@ void Entity::render(sf::RenderTarget& target)
 {
 	target.draw(this->sprite);
 }
+
+sf::Vector2f Entity::getPosition() {
+	return this->sprite.getPosition();
+}

@@ -25,6 +25,7 @@ private:
 
 	Entity* Duck;
 	Level TestLevel;
+	sf::View camera;
 
 	void initVariable();
 	void initWindow();
@@ -36,8 +37,10 @@ public:
 	Game();
 	~Game();
 
-	//Getters
+	//Getters and setters
 	const bool getWindowIsOpen() const;
+	void setView(const sf::View& newView);
+	sf::Vector2f getPlayerPos();
 
 	//Functions
 	void pollEvents();

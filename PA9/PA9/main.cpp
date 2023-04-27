@@ -59,15 +59,19 @@ int main()
 {
 	Game game;
 
+	sf::View cam(sf::Vector2f(0.f, 0.f), sf::Vector2f(800.f, 600.f));
+
 	game.preLoop();
 
 	//Game loop
 	while (game.getWindowIsOpen())
 	{
+		cam.setCenter(game.getPlayerPos());
 		//Update
 		game.update();
 
 		//Render
 		game.render();
+		game.setView(cam);
 	}
 }
