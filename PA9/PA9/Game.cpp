@@ -129,7 +129,7 @@ void Game::updateCollision()
 			else
 			{
 				this->Duck->resetVelocityY();
-				this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->TestLevel.getGroundYpos(i) - this->Duck->getGlobalBounds().height);
+				this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->TestLevel.getThinYpos(i) - this->Duck->getGlobalBounds().height);
 				this->Duck->setGrounded(true);
 			}
 		}

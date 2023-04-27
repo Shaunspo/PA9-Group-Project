@@ -1,12 +1,47 @@
-﻿  main.cpp
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\main.cpp(63,48): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+﻿  Entity.cpp
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(143,29): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
           with
           [
-              T=unsigned int
+              T=int
           ]
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\main.cpp(63,30): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(144,31): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
           with
           [
-              T=unsigned int
+              T=int
           ]
-  PA9.vcxproj -> C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\x64\Debug\PA9.exe
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(158,29): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(159,31): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(173,29): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(174,31): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(188,29): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(189,31): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\PA9\Entity.cpp(203,26): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  PA9.vcxproj -> C:\Users\sethc\Documents\GitHub\PA9-Group-Project\PA9\x64\Debug\PA9.exe
