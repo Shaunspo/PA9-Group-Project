@@ -4,6 +4,7 @@
 #include "SFML/Window.hpp"
 #include "SFML/System.hpp"
 
+enum PLAYER_ANIMATION_STATES { IDLE = 0, MOVING_LEFT, MOVING_RIGHT, JUMPING };
 
 class Entity
 {
@@ -14,7 +15,7 @@ private:
 
 	//Animation
 	sf::IntRect currentFrame;
-	bool moving;
+	short animState;
 	sf::Clock animationTimer;
 
 

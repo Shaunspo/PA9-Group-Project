@@ -1,12 +1,65 @@
-﻿  Level.cpp
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(50,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(87,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(88,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(101,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(102,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(117,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(119,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(125,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(127,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(52,6): warning C4101: 'balconyDecider': unreferenced local variable
-  PA9.vcxproj -> C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\x64\Debug\PA9.exe
+﻿  Camera.cpp
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Camera.cpp(5,24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Camera.cpp(5,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Entity.cpp
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(143,29): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(144,31): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(158,29): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(159,31): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(173,29): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(174,31): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(188,29): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(189,31): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Entity.cpp(203,26): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Game.cpp
+  Level.cpp
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(50,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(87,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(88,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(101,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(102,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(117,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(119,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(125,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(127,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\A WSU school\Semester 2\PA9-Group-Project\PA9\PA9\Level.cpp(52,6): warning C4101: 'balconyDecider': unreferenced local variable
+  main.cpp
+  Platform.cpp
+  Generating Code...
+  PA9.vcxproj -> E:\A WSU school\Semester 2\PA9-Group-Project\PA9\x64\Debug\PA9.exe

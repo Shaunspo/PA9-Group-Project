@@ -2,12 +2,12 @@
 
 void Entity::initvariables()
 {
-	this->moving = false;
+	this->animState = PLAYER_ANIMATION_STATES::IDLE;
 }
 
 void Entity::initTexture()
 {
-	if (!this->textureSheet.loadFromFile("images/idle_duck_animation.png"))
+	if (!this->textureSheet.loadFromFile("images/duck spritesheet-fixed.png"))
 	{
 		std::cout << "Error could not load texture sheet" << std::endl;
 	}
@@ -136,31 +136,64 @@ void Entity::move(const float dir_x, const float dir_y)
 
 void Entity::updateAnimations()
 {
-	if(this->animationTimer.getElapsedTime().asSeconds() >= 0.5f)
-	{ 
-	if (this->moving == false) // idle animation
+	if (this->animState == PLAYER_ANIMATION_STATES::IDLE)
 	{
-		this->currentFrame.left += 64.0f;
-		if(this->currentFrame.top == 0)
-		{ 
-			if (this->currentFrame.left >= 192)
-			{
-				this->currentFrame.left = 0;
-				this->currentFrame.top = 64;
-			}
-		}
-		else
+		if (this->animationTimer.getElapsedTime().asSeconds() >= 0.2f)
 		{
-			if (this->currentFrame.left >= 192)
+			this->currentFrame.top = 0.f;
+			this->currentFrame.left += 64.f;
+			if (this->currentFrame.left >= 384.f)
 			{
 				this->currentFrame.left = 0;
-				this->currentFrame.top = 0;
 			}
+			this->animationTimer.restart();
+			this->sprite.setTextureRect(this->currentFrame);
 		}
-		
+
 	}
-	this->animationTimer.restart();
-	this->sprite.setTextureRect(this->currentFrame);
+	else if (this->animState == PLAYER_ANIMATION_STATES::MOVING_RIGHT)
+	{
+		if (this->animationTimer.getElapsedTime().asSeconds() >= 0.2f)
+		{
+			this->currentFrame.top = 64.f;
+			this->currentFrame.left += 64.f;
+			if (this->currentFrame.left >= 384.f)
+			{
+				this->currentFrame.left = 0;
+			}
+			this->animationTimer.restart();
+			this->sprite.setTextureRect(this->currentFrame);
+		}
+
+	}
+	else if (this->animState == PLAYER_ANIMATION_STATES::MOVING_LEFT)
+	{
+		if (this->animationTimer.getElapsedTime().asSeconds() >= 0.2f)
+		{
+			this->currentFrame.top = 64.f;
+			this->currentFrame.left += 64.f;
+			if (this->currentFrame.left >= 384.f)
+			{
+				this->currentFrame.left = 0;
+			}
+			this->animationTimer.restart();
+			this->sprite.setTextureRect(this->currentFrame);
+		}
+
+	}
+	else if (this->animState == PLAYER_ANIMATION_STATES::JUMPING)
+	{
+		if (this->animationTimer.getElapsedTime().asSeconds() >= 0.4f)
+		{
+			this->currentFrame.top = 64.f;
+			this->currentFrame.left += 64.f;
+			if (this->currentFrame.left >= 384.f)
+			{
+				this->currentFrame.left = 0;
+			}
+			this->animationTimer.restart();
+			this->sprite.setTextureRect(this->currentFrame);
+		}
 	}
 }
 
@@ -192,21 +225,21 @@ void Entity::updatePhysics()
 
 void Entity::updateMovement()
 {
-	this->moving = false;
+	this->animState = PLAYER_ANIMATION_STATES::IDLE;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) //Left
 	{
-		this->move(-1.f, 0.f);
-		this->moving = true;
+		this->move(-0.4f, 0.f);
+		this->animState = PLAYER_ANIMATION_STATES::MOVING_LEFT;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) //Right
 	{
-		this->move(1.f, 0.f);
-		this->moving = true;
+		this->move(0.4f, 0.f);
+		this->animState = PLAYER_ANIMATION_STATES::MOVING_RIGHT;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space) && isGrounded == true) //Jump
 	{
 		this->move(0.f, -1000.f);
-		this->moving = true;
+		this->animState = PLAYER_ANIMATION_STATES::JUMPING;
 		setGrounded(false);
 	}
 }
