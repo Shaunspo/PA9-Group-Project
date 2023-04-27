@@ -1,2 +1,12 @@
-﻿  Game.cpp
+﻿  Level.cpp
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(50,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(87,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(88,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(101,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(102,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(117,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(119,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(125,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(127,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\PA9\Level.cpp(52,6): warning C4101: 'balconyDecider': unreferenced local variable
   PA9.vcxproj -> C:\Users\natha\Desktop\BruhLmao\PA9-Group-Project\PA9\x64\Debug\PA9.exe

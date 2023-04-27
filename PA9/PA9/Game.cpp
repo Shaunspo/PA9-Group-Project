@@ -80,12 +80,12 @@ void Game::updatePlayer()
 void Game::updateCollision()
 {
 	//Collision bottom of screen
-	if (this->Duck->getGlobalBounds().top + this->Duck->getGlobalBounds().height > this->window->getSize().y)
-	{
-		this->Duck->resetVelocityY();
-		this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->window->getSize().y - this->Duck->getGlobalBounds().height);
-		this->Duck->setGrounded(true);
-	}
+	//if (this->Duck->getGlobalBounds().top + this->Duck->getGlobalBounds().height > this->window->getSize().y)
+	//{
+	//	this->Duck->resetVelocityY();
+	//	this->Duck->setPosition(this->Duck->getGlobalBounds().left, this->window->getSize().y - this->Duck->getGlobalBounds().height);
+	//	this->Duck->setGrounded(true);
+	//}
 	//Collision with platform
 	for (int i = 0; i < 50; i++)
 	{	

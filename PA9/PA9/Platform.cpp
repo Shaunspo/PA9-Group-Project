@@ -7,7 +7,7 @@ Platform::Platform() {
 	width = 0.f;
 	height = 0.f;
 	rotation = 0.f;
-	bricks.loadFromFile("images/brickTexture.png");
+	bricks.loadFromFile("images/building1.png");
 	bricks.setRepeated(true);
 }
 
@@ -101,7 +101,7 @@ void GroundPlatform::placePlatform() {
 	rect.setPosition(getXpos(), getYpos());
 	rect.setRotation(0.f);
 	rect.setTexture(&bricks);
-	rect.setTextureRect(sf::IntRect(0, 0, 64, 64));
+	rect.setTextureRect(sf::IntRect(0, 0, 320, 320));
 }
 
 void GroundPlatform::placePlatform(float xPos, float yPos, float w, float h, float rot) {

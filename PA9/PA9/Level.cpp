@@ -54,7 +54,7 @@ void Level::buildLevel() {
 	int prevPlatType; // 0 for GroundPlatform, 1 for ThinPlatform
 	for (int i = 0; i < 50; i++) {
 		if (i == 0) {
-			ground[i].setHeight(100.f);
+			ground[i].setHeight(10.f);
 			ground[i].setWidth(10.f);
 			ground[i].setXpos(0.f);
 			ground[i].setYpos(500.f);
@@ -63,16 +63,16 @@ void Level::buildLevel() {
 		}
 		if (i == 49) {
 			if (prevPlatType == 0) {
-				ground[i].setHeight(100.f);
-				ground[i].setWidth(10.f);
+				ground[i].setHeight(20.f);
+				ground[i].setWidth(20.f);
 				ground[i].setXpos(ground[i - 1].getXpos() + (ground[i - 1].getWidth() * 64) + rand() % 200 + 100);
 				ground[i].setYpos(500.f);
 				ground[i].placePlatform();
 				prevPlatType = 0;
 			}
 			else {
-				ground[i].setHeight(100.f);
-				ground[i].setWidth(10.f);
+				ground[i].setHeight(20.f);
+				ground[i].setWidth(20.f);
 				ground[i].setXpos(thin[i - 1].getXpos() + (thin[i - 1].getWidth() * 64) + rand() % 200 + 100);
 				ground[i].setYpos(500.f);
 				ground[i].placePlatform();
@@ -113,7 +113,7 @@ void Level::buildLevel() {
 			}
 			else {
 				if (prevPlatType == 0) {
-					ground[i].setHeight(100.f);
+					ground[i].setHeight(20.f);
 					ground[i].setWidth(rand() % 15 + 5);
 					ground[i].setXpos(ground[i - 1].getXpos() + (ground[i - 1].getWidth() * 64) + rand() % 200 + 100);
 					ground[i].setYpos(rand() % 500 + 300);
@@ -121,7 +121,7 @@ void Level::buildLevel() {
 					prevPlatType = 0;
 				}
 				else {
-					ground[i].setHeight(100.f);
+					ground[i].setHeight(20.f);
 					ground[i].setWidth(rand() % 15 + 5);
 					ground[i].setXpos(thin[i - 1].getXpos() + (thin[i - 1].getWidth() * 64) + rand() % 200 + 100);
 					ground[i].setYpos(rand() % 500 + 300);

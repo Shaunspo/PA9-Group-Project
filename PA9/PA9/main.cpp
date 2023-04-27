@@ -66,7 +66,9 @@ int main()
 	//Game loop
 	while (game.getWindowIsOpen())
 	{
-		cam.setCenter(game.getPlayerPos());
+		if (game.getPlayerPos().y < 1000) {
+			cam.setCenter(game.getPlayerPos());
+		}
 		//Update
 		game.update();
 
