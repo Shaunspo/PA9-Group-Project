@@ -47,6 +47,26 @@ float Level::getThinRot(int i) {
 }
 
 void Level::buildLevel() {
+	
+	// Test Case 4
+	// ground[0].setHeight(10.f);
+	// ground[0].setWidth(10.f);
+	// ground[0].setXpos(0.f);
+	// ground[0].setYpos(500.f);
+	// ground[0].placePlatform();
+
+	// Test Case 5
+	// thin[0].setHeight(10.f);
+	// thin[0].setWidth(10.f);
+	// thin[0].setXpos(0.f);
+	// thin[0].setYpos(500.f);
+	// thin[0.setRot(36.f);
+	// ground[0].placePlatform();
+	
+	
+	
+	
+	
 	srand(time(NULL));
 	int platDecider;
 	int balconyDecider;

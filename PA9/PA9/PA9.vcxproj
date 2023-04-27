@@ -160,9 +160,16 @@
     <Image Include="images\gameconcept2.png" />
     <Image Include="images\idle_duck_animation.png" />
     <Image Include="images\sea-city-cityscape-1.png" />
+    <Image Include="images\Win_screen.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Fonts\04B_30__.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\VideoDemonstration.mp4" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
