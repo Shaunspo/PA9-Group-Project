@@ -228,17 +228,17 @@ void Entity::updateMovement()
 	this->animState = PLAYER_ANIMATION_STATES::IDLE;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) //Left
 	{
-		this->move(-0.4f, 0.f);
+		this->move(-1.f, 0.f);
 		this->animState = PLAYER_ANIMATION_STATES::MOVING_LEFT;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) //Right
 	{
-		this->move(0.4f, 0.f);
+		this->move(1.f, 0.f);
 		this->animState = PLAYER_ANIMATION_STATES::MOVING_RIGHT;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space) && isGrounded == true) //Jump
 	{
-		this->move(0.f, -1000.f);
+		this->move(0.f, -3000.f);
 		this->animState = PLAYER_ANIMATION_STATES::JUMPING;
 		setGrounded(false);
 	}
