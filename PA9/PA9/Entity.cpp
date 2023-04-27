@@ -206,6 +206,9 @@ void Entity::updatePhysics()
 		this->velocity.y = velocityMaxY * ((this->velocity.y < 0) ? -1.f : 1.f);
 	}
 
+	// Test Case 2
+	// this->velocityMaxY = 400.f;
+
 
 	//Deceleration
 	this->velocity *= this->drag;
@@ -221,6 +224,9 @@ void Entity::updatePhysics()
 	}
 
 	this->sprite.move(this->velocity);
+
+	// Test Case 3
+	// this->sprite.move(0.f, -20000.f);
 }
 
 void Entity::updateMovement()

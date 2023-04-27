@@ -133,6 +133,25 @@ int main()
 							game.render();
 							game.setView(cam);
 						}
+
+						//Test Case 1
+
+						//while (game.getWindowIsOpen())
+							//{
+							//    if (game.getPlayerPos().y < 1000) {
+								//cam.setCenter(game.getPlayerPos());
+						//    }
+							//Update
+							//    game.update();
+
+							//Render
+							//    game.render();
+							//    game.setView(cam);
+							//}
+
+							//}
+
+
 					}
 					if (o == 1)
 					{
